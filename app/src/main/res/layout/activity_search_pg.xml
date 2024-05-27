@@ -1,0 +1,119 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search_pg"
+    android:background="@android:color/holo_orange_light">
+
+    <!-- Top Navigation Bar -->
+    <LinearLayout
+        android:id="@+id/TitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+
+        <!-- Back Button -->
+        <TextView
+            android:id="@+id/bckButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back"
+            android:textColor="#FFA500"
+            android:layout_gravity="center_vertical"/>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Content"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"/>
+
+        <!-- Filter Button -->
+        <TextView
+            android:id="@+id/flterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filter"
+            android:textColor="#FFA500"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/TitleBar"
+        android:layout_margin="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/search_bg"
+        android:drawableEnd="@drawable/baseline_search_24"
+        android:hint="Search"
+        android:padding="10dp"/>
+
+    <!-- RecyclerView for Search Results -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_below="@+id/searchBar"
+        android:layout_above="@+id/bottomNavigation"
+        android:padding="16dp"
+        android:clipToPadding="false"
+        tools:listitem="@layout/activity_search_results"
+        android:background="@color/white">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- Navigation Dots -->
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/active_dot"
+            android:layout_margin="8dp"/>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/inactive_dot"
+            android:layout_margin="8dp"/>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/inactive_dot"
+            android:layout_margin="8dp"/>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/inactive_dot"
+            android:layout_margin="8dp"/>
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/inactive_dot"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

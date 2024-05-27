@@ -1,0 +1,4 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#D3D3D3"/> <!-- Light gray color for inactive dots -->
+    <corners android:radius="4dp"/> <!-- Making it a circle by setting the radius to half of the width/height -->
+</shape>

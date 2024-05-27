@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFC107"
+    tools:context=".MainActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/topSection"
+        android:layout_width="match_parent"
+        android:layout_height="210dp"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:paddingTop="50dp"
+        android:paddingBottom="10dp">
+
+        <!-- Settings button -->
+        <TextView
+            android:id="@+id/settingsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="16dp"
+            android:text="Settings"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <!-- Logout button -->
+        <TextView
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="16dp"
+            android:text="Logout"
+            android:textColor="@android:color/holo_orange_light" />
+
+        <!-- Profile title -->
+        <TextView
+            android:id="@+id/profileTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@id/profileTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/circle_shape"
+            android:scaleType="centerCrop"
+            android:src="@drawable/roby" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:orientation="vertical"
+        android:layout_below="@id/topSection"
+        android:gravity="center_horizontal"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/profileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tom Robertson"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/profileSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp" />
+
+        <!-- Tabs for Posts and Photos -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_tabs"
+            android:padding="4dp">
+
+        <TextView
+            android:id="@+id/postsTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Posts"
+            android:textColor="@android:color/darker_gray"
+            android:padding="10dp"
+            android:background="@drawable/left_tab"
+            android:layout_weight="1"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/photosTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Photos"
+            android:textColor="@android:color/black"
+            android:padding="10dp"
+            android:background="@drawable/right_tab"
+            android:layout_weight="1"
+            android:gravity="center" />
+            </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/contentPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No photos yet"
+            android:textColor="@android:color/darker_gray"
+            android:gravity="center" />
+    </FrameLayout>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginBottom="3dp"
+            android:src="@drawable/baseline_add_circle_outline_24"
+            app:tint="@android:color/holo_orange_dark"
+            />
+</LinearLayout>
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="56dp"
+android:layout_alignParentBottom="true"
+android:background="#E0E0E0"
+android:orientation="horizontal"
+android:gravity="center">
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_margin="16dp"
+    android:src="@drawable/active_dot"
+    android:tint="@android:color/holo_orange_dark" />
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_margin="16dp"
+    android:src="@drawable/inactive_dot"
+    android:tint="@android:color/darker_gray" />
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_margin="16dp"
+    android:src="@drawable/inactive_dot"
+    android:tint="@android:color/darker_gray" />
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_margin="16dp"
+    android:src="@drawable/inactive_dot"
+    android:tint="@android:color/darker_gray" />
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:layout_margin="16dp"
+    android:src="@drawable/inactive_dot"
+    android:tint="@android:color/darker_gray" />
+</LinearLayout>
+    </RelativeLayout>
