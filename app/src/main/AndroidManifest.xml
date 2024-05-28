@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.manipal.exchangify">
@@ -12,6 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Exchangify"
         tools:targetApi="31">
+        <activity
+            android:name=".chat_item"
+            android:exported="false" />
+        <activity
+            android:name=".notification_item"
+            android:exported="false" />
+        <activity
+            android:name=".notification"
+            android:exported="false" />
+        <activity
+            android:name=".Chat_main"
+            android:exported="false" />
         <activity
             android:name=".item_card"
             android:exported="false" />
@@ -42,16 +55,15 @@
         <activity
             android:name=".page2"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="false" />
-
         <activity
             android:name=".page1"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
