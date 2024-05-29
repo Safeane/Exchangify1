@@ -18,18 +18,19 @@
             android:id="@+id/profileimage"
             android:layout_width="90dp"
             android:layout_height="90dp"
-            android:src="@drawable/man"/>
+            android:src="@drawable/chatgirl"
+            android:layout_marginTop="30dp"/>
         <TextView
             android:id="@+id/recivername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Ayush Kumar"
+            android:text="Meena Kumar"
             android:gravity="center"
             android:textColor="@color/white"
-            android:textSize="25dp"
+            android:textSize="20dp"
             android:layout_margin="10dp"/>
 
-        <!-- Receiver chat bubble -->
+
         <RelativeLayout
             android:id="@+id/receiverBubble"
             android:layout_width="wrap_content"
@@ -70,11 +71,10 @@
                 android:text="11:30 AM"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="12sp"
-                android:layout_marginTop="4dp" /> <!-- Adjusted margin for proper spacing -->
+                android:layout_marginTop="4dp" />
 
         </RelativeLayout>
 
-        <!-- Additional chat bubble -->
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -103,7 +103,6 @@
                 android:textColor="@android:color/darker_gray"
                 android:textSize="12sp" />
 
-            <!-- EditText and send button -->
             <LinearLayout
                 android:id="@+id/ll2"
                 android:layout_width="match_parent"
